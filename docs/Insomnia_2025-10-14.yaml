@@ -1,0 +1,147 @@
+type: collection.insomnia.rest/5.0
+name: Produtos-LojaEsprcio
+meta:
+  id: wrk_2e3678dd9251490182980d84a324bb5a
+  created: 1759256745024
+  modified: 1759859873850
+  description: ""
+collection:
+  - name: RotasLojaEspricio
+    meta:
+      id: fld_a17a879822814cda93da217c9c2bf26a
+      created: 1759861400454
+      modified: 1759861400454
+      sortKey: -1759861400454
+      description: ""
+    children:
+      - name: Produtos
+        meta:
+          id: fld_9271db559c75441397d7db638b04571b
+          created: 1759861906764
+          modified: 1759861916274
+          sortKey: -1759861408372
+          description: ""
+        children:
+          - url: localhost:8081/produtos
+            name: Buscar todos os produtos
+            meta:
+              id: req_f078890807df43dfb62aeb2e68acca6b
+              created: 1759256745060
+              modified: 1759861926038
+              isPrivate: false
+              description: ""
+              sortKey: -1759861924866
+            method: GET
+            headers:
+              - name: User-Agent
+                value: insomnia/11.6.0
+            settings:
+              renderRequestBody: true
+              encodeUrl: true
+              followRedirects: global
+              cookies:
+                send: true
+                store: true
+              rebuildPath: true
+          - url: localhost:8081/produtos
+            name: Adicionar Produtos
+            meta:
+              id: req_ef0f8b4cf5a94195af07da17b8d45562
+              created: 1759859372735
+              modified: 1760444284722
+              isPrivate: false
+              description: ""
+              sortKey: -1759861924766
+            method: POST
+            body:
+              mimeType: application/json
+              text: |-
+                {
+                	"nomeProduto": "brócolis",
+                	"precoProduto": 5.50
+                }
+            headers:
+              - name: Content-Type
+                value: application/json
+              - name: User-Agent
+                value: insomnia/11.6.1
+            settings:
+              renderRequestBody: true
+              encodeUrl: true
+              followRedirects: global
+              cookies:
+                send: true
+                store: true
+              rebuildPath: true
+      - name: Cliente
+        meta:
+          id: fld_e5906d8fb40446f3894da21de61650d1
+          created: 1759861937675
+          modified: 1759861937675
+          sortKey: -1759861937675
+          description: ""
+        children:
+          - url: localhost:8081/clientes
+            name: Buscar todos os clientes
+            meta:
+              id: req_07791461b1204e4e82683a0fd74ee37b
+              created: 1760440849543
+              modified: 1760440888473
+              isPrivate: false
+              description: ""
+              sortKey: -1760440849543
+            method: GET
+            headers:
+              - name: User-Agent
+                value: insomnia/11.6.1
+            settings:
+              renderRequestBody: true
+              encodeUrl: true
+              followRedirects: global
+              cookies:
+                send: true
+                store: true
+              rebuildPath: true
+          - url: localhost:8081/clientes
+            name: Adiconar Cliente
+            meta:
+              id: req_fddc20a5af4a49e0a2105c41a7c1c3c9
+              created: 1760444152598
+              modified: 1760449533263
+              isPrivate: false
+              description: ""
+              sortKey: -1760444152598
+            method: POST
+            body:
+              mimeType: application/json
+              text: |-
+                {
+                	"nomeCliente": "migul",
+                	"cpfCliente": "33333303033"	
+                }
+            headers:
+              - name: Content-Type
+                value: application/json
+              - name: User-Agent
+                value: insomnia/11.6.1
+            settings:
+              renderRequestBody: true
+              encodeUrl: true
+              followRedirects: global
+              cookies:
+                send: true
+                store: true
+              rebuildPath: true
+cookieJar:
+  name: Default Jar
+  meta:
+    id: jar_820fb5bace57c5fff6c127ece6f9809f20b5fc77
+    created: 1759256745042
+    modified: 1759256745042
+environments:
+  name: Base Environment
+  meta:
+    id: env_820fb5bace57c5fff6c127ece6f9809f20b5fc77
+    created: 1759256745034
+    modified: 1759256745034
+    isPrivate: false
