@@ -39,7 +39,11 @@ const produtoController = {
 
             await produtoModel.inserirProduto(nomeProduto, precoProduto)
 
+<<<<<<< HEAD
             res.status(201).json({message: 'Produto cadastrado com sucesso!'});
+=======
+            res.status(201).json({messgae: 'Produto cadastrado com sucesso!'});
+>>>>>>> 14bad74017c00cdf8f5a971709f94239aee56688
 
         } catch (error) {
             console.error('Erro ao cadastrar produto', error);
